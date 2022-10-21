@@ -1,0 +1,26 @@
+#!"/bin/bash
+myUrl=$1
+
+function killChromeProcess(){
+  echo "starting to kill al chrome processes"
+  for PROCESSID in $(ps aux | grep "Google chrome" | awk '{print $2}')
+  do
+    kill -9 $PROCESSID
+    echo "killing process" $PROCESSID
+  done
+
+  echo " sarting chorme now"
+  echo "Open " $1 " URL now"
+  open -a "Google Chrome" $1
+}
+
+functio  main(){
+  if [ -n "$1" ]; then
+    killChromeProcess
+  else
+    echo "Syntax: ./killchrome <yourURL example https://www.google.com>"
+    exit 1
+  fi
+}
+
+main
