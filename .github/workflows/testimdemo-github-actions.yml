@@ -11,6 +11,4 @@ jobs:
                 node-version: '16.13.0'
             - run: npm install -g @testim/testim-cli
             - run: testim --version
-            - run: testim --label "githubactions"  --token ${{ secrets.TESTIM_TOKEN }} 
-            --project {{ secrets.TESTIM_PROJECTID }} --grid "Testim-Grid"
-            --result-label "githubactionsExample" --tubo-mode
+            - run: testim --label "githubactions"  --token ${{ secrets.TESTIM_TOKEN }} --project {{ secrets.TESTIM_PROJECTID }} --grid "Testim-Grid" --result-label "githubactionsExample" --tubo-mode
