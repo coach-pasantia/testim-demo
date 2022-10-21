@@ -13,3 +13,4 @@ jobs:
             - run: testim --version
             - run: testim --label "githubactions"  --token "zVzSIb5vCBjo4ROW7fLxU2Uwlj932WKu10qov7WhOAGOgG4p7U" 
             --project "sWwq7yG2gTjoMFulsDiE" --grid "Testim-Grid"
+            --result-label "githubactionsExample" --tubo-mode
