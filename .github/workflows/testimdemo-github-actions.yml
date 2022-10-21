@@ -1,0 +1,15 @@
+name: Testim-github-actions
+on: [push]
+
+jobs:
+    run-testimio-cli:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                node-version: '16.13.0'
+            - run: npm install -g @testim/testim-cli
+            - run: testim --version
+            - run: testim --label "githubactions"  --token "zVzSIb5vCBjo4ROW7fLxU2Uwlj932WKu10qov7WhOAGOgG4p7U" 
+            --project "sWwq7yG2gTjoMFulsDiE" --grid "Testim-Grid"
